@@ -1,45 +1,86 @@
 <!DOCTYPE html>
+
+<!--
+  This practice will revisit some simple CSS styling, while reinforcing the following cascade rule: specificity and how to craft/calculate weight for declarations.
+-->
+
 <html>
+  <head>
+    <style>
+      body {
+        color: red;
+      }
+      body p {
+        font-size: 20px;
+      }
+      div {
+        border: 3px solid black;
+        padding: 10px;
+        font-size: 36px;
+      }
+      span {
+        color: green !important;
+      }
+      div p {
+        font-size: 24px;
+        color: blue;
+        background-color: black;
+      }
+      .warning {
+        background-color: yellow;
+      }
+      /* PROBLEM 1
+      Craft the least specific declaration to change only Paragraph 1 to orange.
+      */
+      /* ENTER YOUR CODE HERE */
 
-<body>
-  <h1>Practice Problems Webpage</h1>
-  <p>All your solutions for this set of practice problems are located in the Replit console.  Please open the console by clicking the wrench icon near the top-right corner of this browser.
-  </p>
-  <script>
-    /* 
-    PROBLEM 1: 
-    */
-    //ENTER YOUR CODE HERE
-     
-    /* 
-    PROBLEM 2: 
-    */
-    //ENTER YOUR CODE HERE
-    
-     /* 
-    PROBLEM 3: 
-    */
-    //ENTER YOUR CODE HERE
+      /* PROBLEM 2
+      Craft the least specific declaration to change only Paragraph 4's background color to orange.
+      */
+      /* ENTER YOUR CODE HERE */
 
-    /* 
-    PROBLEM 4: 
-    */
-    //ENTER YOUR CODE HERE
+      /* PROBLEM 3
+      Craft the least specific declaration to change Title 3's backgorund color and Paragraph 6's background color to green.
+      */
+      /* ENTER YOUR CODE HERE */
 
-    /* 
-    PROBLEM 5 (DEBUGGING): 
-    */
-    
-  </script> 
-  <section style="border: 2px solid blue; border-radius: 5px; padding: 10px; box-shadow: 5px 3px 3px orange; margin-top: 20px;">
-    <h3>About The Solutions</h3>
-    <p>
-    PLEASE READ: To access the solutions to these practice problems, click the "index (solution).html" file on the left-hand side of the Replit website, under "Files".  You can try each solution by copying it into your "index.html" file and clicking "Run". 
-      <br></br>
-    <h4>Remember to please try the
-    practice problems first before looking at the solutions.</h4>
-    </p>
-  </section>
-</body>
+      /* PROBLEM 4
+      Craft the least specific declaration to change only Paragraph 5's div background color to grey.
+      */
+      /* ENTER YOUR CODE HERE */
 
+      /* PROBLEM 5 (DEBUGGING)
+      We wanted to have both Title 2 and Title 3 with a purple background. But the declaration below is setting Title 2 only. Why?  
+      */
+      /* ENTER YOUR CODE HERE */
+      span h1 {
+        background-color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>TITLE 1</h1>
+    <span>
+      <h1>TITLE 2</h1>
+    </span>
+    <span>
+      <h1>
+        <p>TITLE 3</p>
+      </h1>
+    </span>
+    <span style="color: black">Span</span>
+    <p>Paragraph 1</p>
+    <div>
+      Text
+      <p>Paragraph 2</p>
+      <p class="warning">Paragraph 3</p>
+      <p id="caution" class="warning">Paragraph 4</p>
+      <div>
+        <p>Paragraph 5</p>
+      </div>
+      <span>
+        <p>Paragraph 6</p>
+      </span>
+    </div>
+  </body>
 </html>
